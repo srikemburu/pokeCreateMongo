@@ -14,17 +14,15 @@ const buttonStyle = {
 
 class Show extends React.Component {
    render () {
-    const pokeObj = this.props.pokeObj
-    const pokeIndex = this.props.pokeIndex
+    const { pokemon } = this.props;
 
     return (
       <div>
         <h1> Gotta Catch 'Em All </h1> 
-        <h2>{pokeObj.name.charAt(0).toUpperCase() + pokeObj.name.slice(1)}</h2>
-        <img src={pokeObj.img + ".jpg"}  width="200" height="200"></img>
-
+        <h2>{pokemon.pokeName.charAt(0).toUpperCase() + pokemon.pokeName.slice(1)}</h2>
+        <img src={pokemon.imageURL + ".jpg"}  width="200" height="200"></img>
         <nav>
-            <a href="/backToIndex">
+            <a href="/pokemon">
                 <button style={buttonStyle}>Back</button>
                 <br></br>
                 <br></br>
