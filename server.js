@@ -40,7 +40,7 @@ app.get('/pokemon/new', (req,res)=>{
 //form POST 
 app.post('/pokemon/', (req, res)=>{
     pokemon.create(req.body, (error, createdPokemon)=>{
-    res.redirect('/Index')    //send the user back to /pokemon
+    res.redirect('/pokemon')    //send the user back to /pokemon
     })  
   })
 
